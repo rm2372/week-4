@@ -1,18 +1,24 @@
 #include <iostream>
 using namespace std;
-int main()
+class T4Tutorials_Decimal_Number
 {
-int a[10], n, i;
-cout<<"Enter the number to convert: ";
-cin>>n;
-for(i=0; n>0; i++)
-{
-a[i]=n%2;
-n= n/2;
-}
-cout<<"Binary of the given number= ";
-for(i=i-1 ;i>=0 ;i--)
-{
-cout<<a[i];
-}
-}
+	public:
+		T4Tutorials_Decimal_Number(int n)
+		{
+		int i=1,j=n,T4Tutorials_Binary_Number=0;
+	     		cout<<"Please enter Decimal  number : ";
+				cin>>n;
+				for(j=n;j>0;j=j/2)
+				{
+					T4Tutorials_Binary_Number=T4Tutorials_Binary_Number+(n%2)*i;
+					i=i*10;
+					n=n/2;
+				}
+				cout<<"binary number ="<<T4Tutorials_Binary_Number;
+			}
+		};
+		int main()
+		{
+			T4Tutorials_Decimal_Number obj(4);
+
+		}
